@@ -1,0 +1,38 @@
+body{
+	margin: 0;
+}
+
+#map{
+	height: 600px;
+	width: 800px;
+	background-color: #C5DBF5;
+	float: left;
+	position: absolute;
+}
+
+#info{
+	height: 600px;
+	width: 220px;
+	background-color: #7A9DB5;
+	float: left;
+	margin-left: 800px;
+	position: absolute;
+}
+p{
+	font-family: "Arial";
+	font-weight: bold;
+	font-size: 1.3em; 
+	color: #F7E165;
+	text-align: center;
+}
+#scoreInfo {
+	padding-top: 120px;
+	font-size: 2em;
+}
+button {
+	height: 30px;
+	width: 70px;
+	font-size: 1em;
+	margin-top: 40px;
+	margin-left: 70px;
+}
