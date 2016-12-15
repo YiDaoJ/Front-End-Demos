@@ -10,71 +10,71 @@
 	</style>
 </head>
 <body>
+<div>
+	<input type="file" id="file">
+</div>
+
+<div id="image-container">
+	<canvas width="400" height="400"></canvas>
 	<div>
-		<input type="file" id="file">
+		<span>Top Line:</span><br/>
+		<input type="text" id="topLineText"><br/>
+
+		<span>Buttom Line:</span><br/>
+		<input type="text" id="buttomLineText"><br/>
+
+		<button id="saveBtn">Save</button>
 	</div>
-		
-	<div id="image-container">
-		<canvas width="400" height="400"></canvas>
-		<div>
-			<span>Top Line:</span><br/>
-			<input type="text" id="topLineText"><br/>
+</div> 
 
-			<span>Buttom Line:</span><br/>
-			<input type="text" id="buttomLineText"><br/>
+<script type="text/javascript">
 
-			<button id="saveBtn">Save</button>
-		</div>
-	</div> 
+function textChangeListener (event) {
+	var id = event.target.id;
+	var text = event.target.value;
 
-	<script type="text/javascript">
-		
-	function textChangeListener (event) {
-		var id = event.target.id;
-		var text = event.target.value;
-
-		if(id === 'topLineText') {
-			window.topLineText = text;
-		} else {
-			window.buttomLineText = text;
-		}
-
-		drawMeme(window.imageSrc, window.topLineText, window.buttomLineText);
-
+	if(id === 'topLineText') {
+		window.topLineText = text;
+	} else {
+		window.buttomLineText = text;
 	}
 
-	function drawMeme (img, topLine, buttomLine) {
-		var canvas = document.querySelector('canvas');
-		var ctx = canvas.getContext('2d');
+	drawMeme(window.imageSrc, window.topLineText, window.buttomLineText);
 
-		if (img !== null)
-        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+}
 
-		ctx.font = '36pt Impact';
-		ctx.textAlign = 'center';
-		ctx.fillStyle = 'white';
-		ctx.strokeStyle = 'black';
-		ctx.lineWidth = 3;
-		
-		if(topLine !== null) {
-			ctx.fillText(topLine, canvas.width/2, 50);
-			ctx.strokeText(topLine, canvas.width/2, 50);
-		}
+function drawMeme (img, topLine, buttomLine) {
+	var canvas = document.querySelector('canvas');
+	var ctx = canvas.getContext('2d');
 
-		if(buttomLine !== null) {
-			ctx.fillText(buttomLine, canvas.width/2, canvas.height-10);
-			ctx.strokeText(buttomLine, canvas.width/2, canvas.height-10);
-		}
+	if (img !== null)
+		ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
 
-		
+	ctx.font = '36pt Impact';
+	ctx.textAlign = 'center';
+	ctx.fillStyle = 'white';
+	ctx.strokeStyle = 'black';
+	ctx.lineWidth = 3;
 
+	if(topLine !== null) {
+		ctx.fillText(topLine, canvas.width/2, 50);
+		ctx.strokeText(topLine, canvas.width/2, 50);
 	}
 
-	function saveFile() {
-		window.open(document.querySelector('canvas').toDataURL());
+	if(buttomLine !== null) {
+		ctx.fillText(buttomLine, canvas.width/2, canvas.height-10);
+		ctx.strokeText(buttomLine, canvas.width/2, canvas.height-10);
 	}
 
-	function handleFileSelect(evt) {
+
+
+}
+
+function saveFile() {
+	window.open(document.querySelector('canvas').toDataURL());
+}
+
+function handleFileSelect(evt) {
     // var canvasWidth = 400;
     // var canvasHeight = 400;
     var file = evt.target.files[0];    
@@ -110,7 +110,7 @@
 
 
 
-	</script>
+</script>
 
 </body>
 </html>
