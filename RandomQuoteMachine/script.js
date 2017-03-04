@@ -146,6 +146,7 @@ var nextBtn = document.getElementById("next");
 var tweetBtn = document.getElementById("tweet");
 
 
+
 window.onload = function(){
   // Note object instanzieren
   randomNote = new Note();
@@ -154,7 +155,10 @@ window.onload = function(){
   randomColor = new Color();
   randomColor.nextColor();
 
-  //next button event
+  // the first Quote when Site loaded
+  nText.value = nText.innerHTML = randomNote.nextQuote();
+
+    //next button event
   nextBtn.onclick = function(){
     nText.innerHTML = randomNote.nextQuote();
     nAuthor.innerHTML = randomNote.auth;
@@ -163,9 +167,8 @@ window.onload = function(){
 
   //next button event
   tweetBtn.onclick = function(){
-    var url = "http://twitter.com/share?text=" + randomNote.nextQuote();
+    var url = "http://twitter.com/share?text=" + randomNote.quoteText;
     window.open(url, "twitter", "width=600,height=400");  
   };
-
 
 };
