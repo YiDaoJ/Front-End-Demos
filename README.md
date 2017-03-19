@@ -10,4 +10,7 @@
 - [Tribute Page](http://codepen.io/yidaoJ/full/ZBVMwK/) ([Challenge in FreeCodeCamp](https://www.freecodecamp.com/challenges/build-a-tribute-page))
 
 ## CSS
-- [Drop Down Menu](http://codepen.io/yidaoJ/full/pepdbd/)
+- [Pure CSS Drop Down Menu](http://codepen.io/yidaoJ/full/pepdbd/)
+
+## jQuery
+- [Drop Down Menu](http://codepen.io/yidaoJ/full/jBYdKq/)
