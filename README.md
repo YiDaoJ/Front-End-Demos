@@ -5,7 +5,7 @@
 - [Meme Maker](https://yidaoj.github.io/demos/canvas/MemeMaker.html)
 - [Simple Calculator](http://codepen.io/yidaoJ/full/EWNYvX/)
 - [Random Quote Machine](http://codepen.io/yidaoJ/full/NpNeLK/) ([Challenge in FreeCodeCamp](https://www.freecodecamp.com/challenges/build-a-random-quote-machine))
-
+- [Image Slider](http://codepen.io/yidaoJ/full/vxRYvY/)
 ## Bootstrap
 - [Tribute Page](http://codepen.io/yidaoJ/full/ZBVMwK/) ([Challenge in FreeCodeCamp](https://www.freecodecamp.com/challenges/build-a-tribute-page))
 
