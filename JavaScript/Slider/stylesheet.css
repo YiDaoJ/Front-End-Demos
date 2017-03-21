@@ -1,7 +1,6 @@
 body {
 	background-color: #34495e;
 	font-family: 'Rubik', sans-serif;
-
 }
 
 h1 {
@@ -14,7 +13,7 @@ h1 {
 
 /* ====== Slider ======= */
 
-div#slider {
+#slider {
 	position: relative;
 	width: 600px;
 	height: 260px;
@@ -28,8 +27,10 @@ div#slider {
 	left: 0;
 }
 
-ul#sliderwrapper {
-	position: relative;
+#sliderwrapper {
+	position: absolute;
+	/*left: -600px;*/
+	float: left;
 	padding: 0;
 	width: 600px;
 	height: 260px;	
@@ -38,15 +39,12 @@ ul#sliderwrapper {
 	overflow: hidden;
 }
 
-#sliderwrapper li {
-	display: none;
-}
-
 #sliderwrapper .current_img {
 	display: block;
+	/*position: absolute;*/
 }
 
-a#prev, a#next {
+#prev, #next {
 	position: absolute;
 	z-index: 100;
 	color: #999999;
@@ -55,31 +53,29 @@ a#prev, a#next {
 	text-decoration: none;
 }
 
-a#prev {
+#prev {
 	top: 120px;
 	left: -50px;
 }
 
-a#next {
+#next {
 	top: 120px;
 	left: 630px;
 }
 
-a#prev:hover, a#next:hover {
-	color: #ecf0f1;
+#prev:hover, #next:hover {
+	color: #f1c40f;
 }
-
-
 
 /* ========= controller ======== */
 
-div#controller {
+#controller {
 	width: 200px;
 	margin:0 auto;
 	padding-top: 20px;
 }
 
-ul#controller_wrapper {
+#controller_wrapper {
 	list-style: none;
 }
 
@@ -87,10 +83,18 @@ ul#controller_wrapper {
 	display: block;
 	float: left;
 	margin-right: 20px;
-	width: 14px;
-	height: 14px;
+	width: 15px;
+	height: 15px;
 	border-radius: 100%;
 	background-color: #999999;
+}
+
+#controller_wrapper li:hover {
+	background-color: #f1c40f;
+}
+
+#controller_wrapper li.active {
+	background-color: #f1c40f;
 }
 
 /* ===== footer ===== */
