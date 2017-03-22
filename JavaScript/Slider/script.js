@@ -4,8 +4,8 @@ window.onload = function() {
 
 	var slider = document.getElementById('slider');
 	var slideList = document.getElementById('sliderwrapper');
-	// var pic = document.getElementById('current_img');	
-	var picWidth = pic.width;
+	var pic = document.getElementById('current_img');	
+	// var picWidth = pic.width;
 
 	var ctrlPoint = document.getElementById('controller_wrapper').querySelectorAll('li');
 	var controller = document.getElementById('controller');
