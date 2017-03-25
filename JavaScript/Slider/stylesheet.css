@@ -29,7 +29,6 @@ h1 {
 
 #sliderwrapper {
 	position: absolute;
-	/*left: -600px;*/
 	float: left;
 	padding: 0;
 	width: 600px;
@@ -44,7 +43,8 @@ h1 {
 	/*position: absolute;*/
 }
 
-#prev, #next {
+#prev, 
+#next {
 	position: absolute;
 	z-index: 100;
 	color: #999999;
@@ -63,7 +63,8 @@ h1 {
 	left: 630px;
 }
 
-#prev:hover, #next:hover {
+#prev:hover, 
+#next:hover {
 	color: #f1c40f;
 }
 
