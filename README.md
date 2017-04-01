@@ -14,3 +14,4 @@
 
 ## jQuery
 - [Drop Down Menu](http://codepen.io/yidaoJ/full/jBYdKq/)
+- [Image Slider](http://codepen.io/yidaoJ/full/yMZVBL/)
