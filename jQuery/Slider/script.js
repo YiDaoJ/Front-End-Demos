@@ -29,7 +29,7 @@ $(document).ready(function() {
 	// set defautl pic and other property
 	$('#current_img')
 		.attr('src', 'https://i.imgsafe.org/'+ pics[0].picUrl +'.jpg')
-		.css('width', '100%');
+		.css('min-width', '100%');
 	$('#caption h1').html(pics[0].title);
 	$('#caption p').html(pics[0].description);
 	$controller.eq(0).addClass('activ');
