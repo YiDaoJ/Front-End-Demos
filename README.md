@@ -11,6 +11,7 @@
 
 ## CSS
 - [Pure CSS Drop Down Menu](http://codepen.io/yidaoJ/full/pepdbd/)
+- [Flipping Animation](http://codepen.io/yidaoJ/full/JNoXWL/)
 
 ## jQuery
 - [Drop Down Menu](http://codepen.io/yidaoJ/full/jBYdKq/)
