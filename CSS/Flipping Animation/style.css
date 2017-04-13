@@ -1,0 +1,146 @@
+body {
+	margin: 0 auto;
+	font-family: 'Muli', sans-serif;
+	background-color: #FFFAFA;
+	color: #708090;
+}
+
+h1 {
+	text-align: center;
+	margin: 50px auto;
+}
+
+/* ====== Flexbox display ======= */
+
+#wrapper {
+	position: relative;
+	width: 50%;
+	margin:auto;
+
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-flow: column;
+	-ms-flex-flow: column;
+	flex-flow: column;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: space-between;
+	justify-content: space-between;
+}
+
+/* embedded flexbox */
+.hori-flip, .vert-flip {	
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-justify-content: space-around;
+	-ms-flex-pack: justify;
+	justify-content: space-around;
+}
+
+
+/* ====== Flip effect ======= */
+.container {
+	-webkit-perspective: 600px;
+	-moz-perspective: 600px;
+	-o-perspective: 600px;
+	perspective: 600px;
+}
+
+.box {
+	margin: 0 auto 50px auto;
+	width: 190px;
+	height: 150px;
+	color: #FFFAFA;
+	font-size: 1.5em;
+	font-weight: bold;
+	text-align: center;
+
+	transition: .5s;
+	-webkit-transition: .5s;
+	transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+}
+
+.front {
+	position: absolute;
+	width: 190px;
+	height: 150px;
+	margin: 0 auto;
+	z-index: 2;
+	border-radius: 10px;
+	background-color: #FFA500;
+
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transform: rotateY(0deg);
+	-moz-transform: rotateY(0deg);
+	-o-transform: rotateY(0deg);
+	transform: rotateY(0deg);
+
+}
+
+.back {
+	position: absolute;
+	width: 190px;
+	height: 150px;
+	margin: 0 auto;
+	border-radius: 10px;
+	background-color: #1abc9c;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+/* flip horizontally*/
+.flipper1 .back,
+.flipper2 .back {
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-o-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
+
+/* flip vertically*/
+.flipper3 .back,
+.flipper4 .back {
+	-webkit-transform: rotateX(180deg);
+	-moz-transform: rotateX(180deg);
+	-o-transform: rotateX(180deg);
+	transform: rotateX(180deg);
+}
+
+/* flip trigger: hover */
+.container:hover .flipper1 {
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-o-transform: rotateY(180deg);
+	transform: rotateY(180deg);	
+}
+
+.container:hover .flipper2 {
+	-webkit-transform: rotateY(-180deg);
+	-moz-transform: rotateY(-180deg);
+	-o-transform: rotateY(-180deg);
+	transform: rotateY(-180deg);
+}
+
+.container:hover .flipper3 {
+	-webkit-transform: rotateX(180deg);
+	-moz-transform: rotateX(180deg);
+	-o-transform: rotateX(180deg);
+	transform: rotateX(180deg);
+}
+
+.container:hover .flipper4 {
+	-webkit-transform: rotateX(-180deg);
+	-moz-transform: rotateX(-180deg);
+	-o-transform: rotateX(-180deg);
+	transform: rotateX(-180deg);
+}
