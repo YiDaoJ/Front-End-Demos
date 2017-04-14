@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS 3D Carousel</title>
+	<link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		var currentFig = 1;
+		var currentDeg = 0;
+
+		$(document).ready(function() {
+
+			$('#next').click(function(){
+				$('#fig'+currentFig).removeClass('show');
+				currentFig++;
+				if(currentFig>8){
+					currentFig=1;
+				}
+				currentDeg-=45;
+				$('#fig'+currentFig).addClass('show');
+				$('.carousel').css({
+			    "-webkit-transform": "rotateY("+currentDeg+"deg)",
+			    "-moz-transform": "rotateY("+currentDeg+"deg)",
+			    "-ms-transform": "rotateY("+currentDeg+"deg)",
+			    "-o-transform": "rotateY("+currentDeg+"deg)",
+			    "transform": "rotateY("+currentDeg+"deg)"
+			  });
+			});
+
+			$('#prev').click(function(){
+				$('#fig'+currentFig).removeClass('show');
+				currentFig--;
+				if(currentFig<1){
+					currentFig=8;
+				}
+				currentDeg+=45;
+				$('#fig'+currentFig).addClass('show');
+				$('.carousel').css({
+			    "-webkit-transform": "rotateY("+currentDeg+"deg)",
+			    "-moz-transform": "rotateY("+currentDeg+"deg)",
+			    "-ms-transform": "rotateY("+currentDeg+"deg)",
+			    "-o-transform": "rotateY("+currentDeg+"deg)",
+			    "transform": "rotateY("+currentDeg+"deg)"
+			  });
+			});
+
+
+		});
+
+	</script>
+</head>
+<body>
+	<h1>CSS 3D Carousel</h1>
+	<div class="container">
+		<div class="carousel">
+			<figure id="fig1" class="show"><img src="https://www.bing.com/az/hprichbg/rb/TitanicBelfast_EN-US7528306628_1366x768.jpg"></figure>
+			<figure id="fig2"><img src="https://www.bing.com/az/hprichbg/rb/MVAU_EN-US9251672081_1366x768.jpg"></figure>
+			<figure id="fig3"><img src="https://www.bing.com/az/hprichbg/rb/WindmillLighthouse_EN-US13814098095_1366x768.jpg"></figure>
+			<figure id="fig4"><img src="https://www.bing.com/az/hprichbg/rb/TulipFestival_EN-US8173850763_1366x768.jpg"></figure>
+			<figure id="fig5"><img src="https://www.bing.com/az/hprichbg/rb/KalsoyIsland_EN-US11592671539_1366x768.jpg"></figure>
+			<figure id="fig6"><img src="https://www.bing.com/az/hprichbg/rb/FFMSeifenblase_DE-DE13119896983_1366x768.jpg"></figure>
+			<figure id="fig7"><img src="https://www.bing.com/az/hprichbg/rb/FreshSalt_DE-DE12189096698_1366x768.jpg"></figure>
+			<figure id="fig8"><img src="https://www.bing.com/az/hprichbg/rb/JulianAlps_EN-GB10581084651_1366x768.jpg"></figure>
+		</div>
+	</div>
+
+	<div class="navigation">
+		<button id="prev">Previous</button>
+		<button id="next">Next</button>
+	</div>
+	
+	<div class="source">
+		Pics from <a href="https://bingwallpaper.com/" target="_blank">bingwallpaper</a>
+	</div>
+
+</body>
+</html>
