@@ -1,4 +1,10 @@
-var picUrl = ['0ee534632a', '0ee540571c', '0ee5436450', '0ee548b6c6'];
+// var picUrl = ['0ee534632a', '0ee540571c', '0ee5436450', '0ee548b6c6'];
+var picUrl = [
+              'GlacierBay_EN-US14938982506_1366x768', 
+              'TitanicBelfast_EN-US7528306628_1366x768', 
+              'GrayWolf_EN-US10344926106_1366x768', 
+              'BristleconePine_EN-US9234523201_1366x768'
+             ];
 
 window.onload = function() {
 
@@ -17,7 +23,8 @@ window.onload = function() {
 	var currentPic = 1;
 
 	// show the first pic
-	pic.setAttribute('src', 'https://i.imgsafe.org/'+ picUrl[currentPic-1] +'.jpg');
+	// pic.setAttribute('src', 'https://i.imgsafe.org/'+ picUrl[currentPic-1] +'.jpg');
+	pic.setAttribute('src', 'https://www.bing.com/az/hprichbg/rb/'+ picUrl[currentPic-1] +'.jpg');
 	pic.style.opacity = 1;
 	ctrlPoint[currentPic-1].className = 'active';
 
@@ -38,7 +45,7 @@ window.onload = function() {
 		 	}
 		}
 		// show the current pic
-		pic.setAttribute('src', 'https://i.imgsafe.org/'+ picUrl[currentPic-1] +'.jpg');		
+		pic.setAttribute('src', 'https://www.bing.com/az/hprichbg/rb/'+ picUrl[currentPic-1] +'.jpg');		
   }
 
 	function moveToNext() {	
