@@ -13,6 +13,7 @@
 - [Pure CSS Drop Down Menu](http://codepen.io/yidaoJ/full/pepdbd/)
 - [Flipping Animation](http://codepen.io/yidaoJ/full/JNoXWL/)
 - [3D Carousel](http://codepen.io/yidaoJ/full/rmaQqo/)
+- [Parallax Scrolling - Undersea World](https://yidaoj.github.io/resume/index.html)
 
 ## jQuery
 - [Drop Down Menu](http://codepen.io/yidaoJ/full/jBYdKq/)
